@@ -36,7 +36,7 @@ Why so many classes are final?
 1. Static helpers are `final` because there is no any situation they can be extended. If you lack some functionality -
    please feel free to make an issue or a PR.
 1. Some default interface implementations are `final` because they are just defaults. Making them non-final 
-   won't let us refactor their internal logic. For these classes lack of configuration is a bug, and we will thank you
+   won't let us refactor their internal logic, as it will be used by heirs. For these classes lack of configuration is a bug, and we will thank you
    for an issue. When the default implementation doesn't suite your needs at all, you have to create your own.
    If you want to read more about when and why `final` is good, have a look at the 
    [@ocramius](https://github.com/ocramius) article 
